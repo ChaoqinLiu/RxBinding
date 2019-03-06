@@ -21,11 +21,8 @@ import io.reactivex.schedulers.Schedulers;
 
 public class CountdownActivity extends BaseActivity {
 
-    @InjectView(R.id.verification_code)
-    EditText verification_code;
-
     @InjectView(R.id.get_verification_code)
-    TextView get_verification_code;
+    TextView verification_code;
 
     private long MAX_COUNT_TIME = 60;
 
