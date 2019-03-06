@@ -28,6 +28,9 @@ public class MainActivity extends BaseActivity {
     @InjectView(R.id.btn_form)
     Button btn_form;
 
+    @InjectView(R.id.btn_countdown)
+    Button btn_countdown;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +70,15 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void accept(@NonNull Object o){
                         Intent intent = new Intent(MainActivity.this,FormValidationActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+        RxView.clicks(btn_countdown)
+                .subscribe(new Consumer<Object>() {
+                    @Override
+                    public void accept(@NonNull Object o){
+                        Intent intent = new Intent(MainActivity.this,CountdownActivity.class);
                         startActivity(intent);
                     }
                 });
