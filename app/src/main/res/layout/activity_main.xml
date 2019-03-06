@@ -16,4 +16,16 @@
         android:layout_width="match_parent"
         android:text="演示长点击事件" />
 
+    <Button
+        android:id="@+id/btn_com"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="防止重复点击" />
+
+    <Button
+        android:id="@+id/btn_form"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="表单验证" />
+
 </LinearLayout>
