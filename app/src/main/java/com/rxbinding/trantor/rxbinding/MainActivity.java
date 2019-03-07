@@ -31,6 +31,9 @@ public class MainActivity extends BaseActivity {
     @InjectView(R.id.btn_countdown)
     Button btn_countdown;
 
+    @InjectView(R.id.btn_recyclerview)
+    Button recyclerview;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +82,15 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void accept(@NonNull Object o){
                         Intent intent = new Intent(MainActivity.this,CountdownActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+        RxView.clicks(recyclerview)
+                .subscribe(new Consumer<Object>() {
+                    @Override
+                    public void accept(@NonNull Object o){
+                        Intent intent = new Intent(MainActivity.this,RecyclerViewActivity.class);
                         startActivity(intent);
                     }
                 });

@@ -2,7 +2,6 @@ package com.rxbinding.trantor.rxbinding;
 
 import android.os.Bundle;
 import android.view.Window;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jakewharton.rxbinding2.view.RxView;

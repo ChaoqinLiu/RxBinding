@@ -34,4 +34,11 @@
         android:layout_height="wrap_content"
         android:text="获取验证码倒计时"/>
 
+    <Button
+        android:id="@+id/btn_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="对RecyclerView的支持"/>
+
 </LinearLayout>
