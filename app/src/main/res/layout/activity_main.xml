@@ -41,4 +41,29 @@
         android:textAllCaps="false"
         android:text="对RecyclerView的支持"/>
 
+    <Button
+        android:id="@+id/btn_ui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="对UI控件进行多次监听"/>
+
+    <Button
+        android:id="@+id/btn_phone1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="演示打电话1"/>
+
+    <Button
+        android:id="@+id/btn_phone2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="演示打电话2"/>
+
+    <Button
+        android:id="@+id/btn_MultiplePermissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="演示同时使用多个权限"/>
+
 </LinearLayout>
