@@ -19,6 +19,12 @@ public class MainActivity extends BaseActivity {
     @InjectView(R.id.text2)
     TextView text2;
 
+    @InjectView(R.id.retrofit)
+    TextView retrofit;
+
+    @InjectView(R.id.retrofit2)
+    TextView retrofit2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +50,26 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void accept(Object o) throws Exception {
                         Intent intent = new Intent(MainActivity.this,RxAndroidForOthertBitmapActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+        RxView.clicks(retrofit)
+                .compose(RxUtils.useRxViewTransformer(MainActivity.this))
+                .subscribe(new Consumer() {
+                    @Override
+                    public void accept(Object o) throws Exception {
+                        Intent intent = new Intent(MainActivity.this,RetrofitActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+        RxView.clicks(retrofit2)
+                .compose(RxUtils.useRxViewTransformer(MainActivity.this))
+                .subscribe(new Consumer() {
+                    @Override
+                    public void accept(Object o) throws Exception {
+                        Intent intent = new Intent(MainActivity.this,Retrofit2Activity.class);
                         startActivity(intent);
                     }
                 });
