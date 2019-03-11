@@ -35,8 +35,8 @@ public class RetrofitManager {
             OkHttpClient okHttpClient = builder.build();
             mRetrofit = new Retrofit.Builder()
                     .baseUrl(APIService.API_BASE_SERVER_URL)
-                    .addConverterFactory(FastJsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .addConverterFactory(FastJsonConverterFactory.create())   //支持fastjson解析
+                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())//支持RxJava
                     .client(okHttpClient)
                     .build();
         }
